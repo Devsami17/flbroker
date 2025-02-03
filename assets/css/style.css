@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+    font-family:"Roboto";
+    background-color: #3178c6;
+    color: white;
+}
+@font-face {
+    font-family: "Logo";
+    src: url("../Fonts/Sointua-Regular.otf");
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #3178c6;
+}
+
+.navbar .logo h6 {
+font-family: "Logo";
+font-size: 30px;
+margin: 0px;
+font-weight: 500;
+font-style: italic;
+}
+
+.nav-links {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.apply-btn {
+    background-color: white;
+    color: #3178c6;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.phone-number {
+    color: white;
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 80px 20px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.apply-now {
+    background-color: rgb(64, 133, 44);
+    padding: 6px 0px;
+    color: white;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.hero p{
+    font-size: 22px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+.mockup .phone {
+    position: relative;
+    height: 540px;
+    top: 0;
+    width: auto;
+    left: 0;
+    z-index: 1; /* Ensure the phone stays below */
+}
+/* Adjustments for different screen sizes */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 0px;
+
+    }
+    .hero div{
+        flex-wrap: wrap-reverse;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .mockup .phone {
+      height: 400px;
+        top: 0;
+        left: 0;
+    }
+    .nav-links{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        height: 40px;width: 40px;
+    }
+    .respo-header.active{
+        opacity: 1;
+        visibility: visible;
+
+    }
+    .image-container{
+        top: 0px !important;
+    }
+    .respo-header{
+        display: block !important;
+        background-color: #000;
+        position: absolute;
+        top: 70px;
+        transition: all .2s ease-in-out;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
+  padding: 20px 0px;
+        z-index: 1000;
+    }
+    .respo-header ul li{
+        list-style: none;
+        margin-bottom: 15px;
+    }
+    .respo-header ul li a{
+        text-decoration: none;
+        color: #fff;
+       
+    }
+    .apply-btn , .phone-number {
+        display:none !important;
+    }
+}
+.hamburger{
+    display: none;
+}
+@media (max-width: 576px) {
+    .nav-links{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        height: 40px;width: 40px;
+    }
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .apply-btn , .phone-number {
+        display:none !important;
+    }
+}
+/* .phone-svg{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    user-select: none;
+    z-index: 2;
+    pointer-events: none;
+    backface-visibility: hidden;
+} */
+h1 span{
+    font-family: "Logo";
+    margin: 0 5px;
+
+}
+canvas {
+    display: block;
+    vertical-align: bottom;
+  }
+  
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+@media only screen and (min-width:1800px){
+    .mockup .phone {
+        height: 750px !important;
+    }
+    .hero{
+        padding: 120px !important;
+    }
+    .hero h1 {
+        font-size: 50px !important;
+    }
+    .image-box{
+        position: absolute;
+    top: 7.2% !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    width: 76% !important;
+    height: 78% !important;
+    z-index: 1;
+    }
+}
+@media only screen and (min-width:2400px){
+.text-area{
+    width: 50% !important;
+}
+}
+.respo-header{
+    display: none;
+}
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    top: -50px;
+    transform: rotate(5deg);
+}
+
+.image-box {
+    position: absolute;
+    top: 7.2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48%;
+    height: 78%;
+    z-index: 1;
+}
+.image-box img {
+    width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            /* top: 50%; */
+            transition: opacity 1s ease-in-out, top 1s ease-in-out;
+}
+@media only screen and (min-width:1200px) and (max-width:1400px){
+    .image-box {
+        width: 55% !important;
+    }
+}
+@media only screen and (min-width:900px) and (max-width:1199px){
+    .image-box {
+        width: 65% !important;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:400px){
+    .image-box {
+        width: 55% !important;
+    }
+}
+@media only screen and (min-width:401px) and (max-width:500px){
+    .image-box {
+        width:37% !important;
+    }
+}
+@media only screen and (min-width:500px) and (max-width:600px){
+    .image-box {
+        width:30% !important;
+    }
+}
+.phone{
+    width: 100%;
+}
+.image-box img.active {
+    opacity: 1;
+    /* top: 0; */
+}
